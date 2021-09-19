@@ -359,7 +359,7 @@
                     <img src="{{asset('assets/images/header/bars.png')}}" alt="bar_png" />
                     @endguest
                     @auth
-                    <img src="{{asset('assets/images/header/user.png')}}" alt="bar_png"/>
+                    <img src="{{asset('assets/images/header/user.png')}}" alt="bar_png" />
                     @endauth
                 </button>
             </div>
@@ -418,8 +418,18 @@
                     <div class="prs_animate_btn1">
                         <ul>
                             <li>
+                                @guest
                                 <a href="#" class="button button--tamaya" data-text="sign up" data-toggle="modal"
                                     data-target="#myModal"><span>sign up</span></a>
+                                @endguest
+                                @auth
+                                <a href="{{ route('logout') }}" class="button button--tamaya" data-text="Logout"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();"><span>Logout</span></a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                                @endauth
                             </li>
                         </ul>
                     </div>

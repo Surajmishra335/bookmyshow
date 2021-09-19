@@ -5,6 +5,8 @@
 <meta name="keywords" content="" />
 <meta name="author" content="" />
 <meta name="MobileOptimized" content="320" />
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
 <!--Template style -->
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.css')}}" />
@@ -23,5 +25,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}" />
 <link rel="stylesheet" id="theme-color" type="text/css" href="#')}}" />
+<!-- Styles -->
+{{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">  --}}
 <!-- favicon links -->
 <link rel="shortcut icon" type="image/png" href="{{asset('assets/images/header/favicon.ico')}}" />

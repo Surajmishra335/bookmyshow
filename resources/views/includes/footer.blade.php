@@ -164,27 +164,32 @@
 <div class="modal fade st_pop_form_wrapper" id="myModal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
+            
             <button type="button" class="close" data-dismiss="modal">
                 &times;
             </button>
             <div class="st_pop_form_heading_wrapper float_left">
                 <h3>Log in</h3>
             </div>
-            <div class="st_profile_input float_left">
-                <label>Email / Mobile Number</label>
-                <input type="text" />
-            </div>
-            <div class="st_profile__pass_input st_profile__pass_input_pop float_left">
-                <input type="password" placeholder="Password" />
-            </div>
-            <div class="st_form_pop_fp float_left">
-                <h3>
-                    <a href="#" data-toggle="modal" data-target="#myModa2" target="_blank">Forgot Password?</a>
-                </h3>
-            </div>
-            <div class="st_form_pop_login_btn float_left">
-                <a href="page-1-7_profile_settings.html">LOGIN</a>
-            </div>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+                <div class="st_profile_input float_left">
+                    <label>Email</label>
+                    <input type="text" name="email" />
+                </div>
+
+                <div class="st_profile__pass_input st_profile__pass_input_pop float_left">
+                    <input type="password" placeholder="Password" name="password"/>
+                </div>
+                <div class="st_form_pop_fp float_left">
+                    <h3>
+                        <a href="#" data-toggle="modal" data-target="#myModa2" target="_blank">Forgot Password?</a>
+                    </h3>
+                </div>
+                <div class="st_form_pop_login_btn float_left">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
             <div class="st_form_pop_or_btn float_left">
                 <h4>or</h4>
             </div>
@@ -250,15 +255,15 @@
                 </div>
                 <div class="st_profile_input float_left">
                     <label>Email</label>
-                    <input type="text" name="email"/>
+                    <input type="text" name="email" />
                 </div>
                 <div class="st_profile_input float_left">
                     <label>Password</label>
-                    <input type="password" placeholder="Password" name="password"/>
+                    <input type="password" placeholder="Password" name="password" />
                 </div>
                 <div class="st_profile_input float_left">
                     <label>Confirm Password</label>
-                    <input type="password" placeholder="Password" name="password_confirmation"/>
+                    <input type="password" placeholder="Password" name="password_confirmation" />
                 </div>
                 <div class="st_form_pop_fp float_left">
                     <h3>
